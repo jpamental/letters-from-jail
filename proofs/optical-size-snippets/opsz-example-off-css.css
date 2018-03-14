@@ -1,0 +1,144 @@
+/* Amstelvar Variable Font */
+@font-face {
+  font-family: 'Amstelvar VF';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/AmstelvarAlpha-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+body, 
+p, 
+th, 
+td, 
+ul, 
+li {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+	font-weight: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  font-style: normal;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+/* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
+ -ms-word-break: break-all;
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
+}
+
+.caption {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+/* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
+ -ms-word-break: break-all;
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
+}
+
+
+
+/* Variations for font size and line height */
+p {
+  font-size: 1em;
+  line-height: 1.15;
+	transition: all linear 0.2s; 	
+}
+
+.caption {
+  font-size: .875em;
+  line-height: 1.15;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+  font-variation-settings: 
+    'wght' 300, 
+    'wdth' 350, 
+    'opsz' 16, 
+    'GRAD' 88;
+	transition: all linear 0.2s; 	
+}
+
+h1 {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-size: 2.25em;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.15;
+  margin: 0 auto 1rem auto;
+  max-width: 42rem;
+}
+
+h2 {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-size: 1.875em;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.15;
+  margin: 0 auto 1rem auto;
+  max-width: 42rem;
+}
+
+h3 {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-size: 1.5em;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.15;
+  margin: 0 auto 1rem auto;
+  max-width: 42rem;
+}
+
+h4 {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-size: 1.125em;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.15;
+  margin: 0 auto 1rem auto;
+  max-width: 42rem;
+}
+

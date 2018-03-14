@@ -1,0 +1,122 @@
+/* Amstelvar Variable Font */
+@font-face {
+  font-family: 'Amstelvar VF';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/AmstelvarAlpha-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+body, 
+p, 
+th, 
+td, 
+ul, 
+li {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+	font-weight: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  font-style: normal;
+}
+
+button {
+  background: #e1e1f1; /* Old browsers */
+  background: -moz-linear-gradient(top, #e1e1f1 0%, #e9e9f9 34%, #d1d1e1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e1e1f1 0%,#e9e9f9 34%,#d1d1e1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e1e1f1 0%,#e9e9f9 34%,#d1d1e1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border: solid 1px #b1b1c1;
+  border-radius: .25em;
+  display: block;
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+	font-size: 2em;
+	font-weight: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  font-style: normal;
+  margin: 0 auto 2em auto;
+  max-width: 25em;
+  padding: 1em 2em;
+	transition: all linear 0.2s; 	
+  width: 100%;
+}
+
+.example-hover {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+}
+
+.example-hover:hover, 
+.example-hover:focus,
+.example-hover:active {
+  background: #e9e9f9; /* Old browsers */
+  background: -moz-linear-gradient(top, #d1d1e1 0%, #d9d9e9 34%, #c1c1d1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #d1d1e1 0%,#d9d9e9 34%,#c1c1d1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #d1d1e1 0%,#d9d9e9 34%,#c1c1d1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  cursor: pointer;
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 150;
+}
+
+.example-pulse {
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  }
+  70% {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 150;
+  }
+  100% {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  }
+}
+@keyframes pulse {
+  0% {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  }
+  70% {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 150;
+  }
+  100% {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 402, 
+    'opsz' 16, 
+    'GRAD' 88;
+  }
+}

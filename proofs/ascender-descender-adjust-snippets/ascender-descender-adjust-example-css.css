@@ -1,0 +1,148 @@
+/* Amstelvar Variable Font */
+@font-face {
+  font-family: 'Amstelvar VF';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/AmstelvarAlpha-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+body, 
+p, 
+th, 
+td, 
+ul, 
+li {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+	font-weight: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.example-hover-tighten,
+.example-pulse-tighten {
+  line-height: 1.25;
+  font-size: 2rem;
+  margin: 0 auto 2rem auto;
+  min-height: 8rem;
+  max-width: 35rem;
+}
+
+.example-hover-tighten {
+  font-style: normal;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+	transition: all linear 0.2s; 	
+}
+
+.example-hover-tighten:hover, 
+.example-hover-tighten:focus,
+.example-hover-tighten:active {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 500,
+    'YTAS' 680,
+    'YTDE' 190,
+    'YTUC' 720,
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: .975;
+}
+
+.example-pulse-tighten {
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.25;
+  }
+  70% {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 500,
+    'YTAS' 680,
+    'YTDE' 190,
+    'YTUC' 720,
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: .975;
+  }
+  100% {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.25
+  }
+}
+@keyframes pulse {
+  0% {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.25;
+  }
+  70% {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 500,
+    'YTAS' 680,
+    'YTDE' 190,
+    'YTUC' 720,
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: .975;
+  }
+  100% {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+  line-height: 1.25
+  }
+}
+

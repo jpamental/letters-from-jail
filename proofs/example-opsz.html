@@ -1,0 +1,139 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+
+		<title>Variable Fonts Demo: Optical Size</title>
+		
+		<link rel="dns-prefetch" href="//ajax.googleapis.com">
+		<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+
+		<!-- meta -->
+		<meta charset="utf-8">
+    <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta http-equiv="cleartype" content="on">
+
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <link rel="stylesheet" href="../css/webfonts.css">
+    <link rel="stylesheet" href="../css/vf_var_styles.css">
+		<!--[if lt IE 9]>
+			<script src="../js/vendor/respond.min.js"></script>
+		<![endif]-->
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="../js/vendor/fontfaceobserver.js"></script>
+		<script type="text/javascript">
+				(function() {
+					document.documentElement.className += " wf-inactive"; 
+			
+					// Optimization for Repeat Views
+					if( sessionStorage.foutFontsLoaded ) {
+						document.documentElement.classList.remove("wf-inactive");
+						document.documentElement.classList.add("wf-active");
+						return;
+					}
+			
+					var fontA = new FontFaceObserver('Amstelvar VF', {
+							weight: 400,
+							style: 'normal'
+						});
+						
+			
+					Promise.all([fontA.load()]).then(function () {
+						document.documentElement.classList.remove("wf-inactive");
+						document.documentElement.classList.add("wf-active");
+			
+						// Optimization for Repeat Views
+						sessionStorage.foutFontsLoaded = true;
+					});
+				})();
+			</script>
+        
+    </head>
+    <body>
+
+        <!-- Add your site or application content here -->
+        <header role="banner" class="banner clearfix" id="banner">
+	        <div class="section-content">
+		        <div class="branding clearfix">
+		        </div>
+	        </div>
+        </header>
+
+        <main class="content-area clearfix">
+	        <div class="section-content">
+		        <article class="article-detail">
+              <h1>Optical Sizing</h1>
+          		<p>One of the things Mike likes about Type is that Scaling type to different sizes allows her to adjust the order of attention her Type gets from the reader and helps her readers, among other things, navigate from the shorter headlines to the longer text they choose to read.</p>
+              <h2>Optical sizing: a primer</h2>
+              <section class="row-2col">
+                <div>
+                  <p>The idea of optical sizing originated in metal type. This was a practice of altering the letterforms and stroke weights based on the physical size of the type. Smaller type was a bit more open, the stroke weights a bit sturdier. All in order to enhance legibility at small sizes without sacrificing the design details at larger ones.</p>
+                </div>
+                <figure class="large border"><img src="../images/optical_size_explained.gif" /><figcaption>Notice how the letterforms become slightly 
+                sturdier as the physical size shrinks</figcaption></figure>
+              
+              </section>
+
+          		<h2>Big and small</h2>
+          		<p>But too often for Mike, when she tries to scale the type too large, it becomes “...too horsey, like too large a pet in too small a space.” And if she tries to scale too small, Mike finds the type too fragile, like “...trying to ride a long way on a cat.”</p>
+          		<p>Lucky for Mike, she found out that type lovers like her can scale their type using OpenType Variable Fonts technology optical size axis (now appearing on most Operating Systems and browswers).</p>
+              <section class="row-2col">              
+                <figure class="pen-embed large"><p data-height="290" data-theme-id="dark" data-slug-hash="gojRVb" data-default-tab="result" data-user="jpamental" data-embed-version="2" data-pen-title="VF Optical Sizing Big/Small (off)" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/jpamental/pen/gojRVb/">VF Optical Sizing Big/Small (off)</a> by Jason Pamental (<a href="https://codepen.io/jpamental">@jpamental</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script><figcaption>Large and small: before</figcaption></figure>
+
+                <figure class="pen-embed large"><p data-height="290" data-theme-id="dark" data-slug-hash="xpJroa" data-default-tab="result" data-user="jpamental" data-embed-version="2" data-pen-title="VF Optical Sizing Big/Small" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/jpamental/pen/xpJroa/">VF Optical Sizing Big/Small</a> by Jason Pamental (<a href="https://codepen.io/jpamental">@jpamental</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script><figcaption>Large and small: after</figcaption></figure>
+              </section>
+
+              <p>
+                Now Mike’s Type looks smooth and consistent, the style of each size appearing visually suited with the others, larger,sizes need less,space and smaller sizes are more readable.</p>
+
+          		<h2>Optical Sizing in action</h2>
+          
+              <section class="row-2col">
+                <div>
+                  <p>Each time the user changes the point size of their type, either the program they are using will select the matching optical point size, for them</p>
+                  <p>Or using a Variable font menu, the user may select an “opsz” in points, per size</p>
+                  <p>Or writing CSS, a user may specify “opsz” the same way as weight of width to get the optical size desired.</p>
+                </div>
+                <figure class="pen-embed large"><p data-height="590" data-width="400" data-theme-id="dark" data-slug-hash="dJmOEr" data-default-tab="result" data-user="jpamental" data-embed-version="2" data-pen-title="VF Optical Sizing" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/jpamental/pen/dJmOEr/">VF Optical Sizing</a> by Jason Pamental (<a href="https://codepen.io/jpamental">@jpamental</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script><figcaption>Using Optical Sizes for each style</figcaption></figure>
+              
+              </section>
+          
+          		<h2>Side-by-side comparison</h2>
+          
+              <section class="row-2col">
+                <figure class="pen-embed large"><p data-height="590" data-width="400" data-theme-id="dark" data-slug-hash="wpXByy" data-default-tab="result" data-user="jpamental" data-embed-version="2" data-pen-title="VF Optical Sizing (off)" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/jpamental/pen/wpXByy/">VF Optical Sizing (off)</a> by Jason Pamental (<a href="https://codepen.io/jpamental">@jpamental</a>) on <a href="https://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script><figcaption>Using one style for all sizes</figcaption></figure>
+ 
+                <figure class="pen-embed large"><p data-height="590" data-width="400" data-theme-id="dark" data-slug-hash="dJmOEr" data-default-tab="result" data-user="jpamental" data-embed-version="2" data-pen-title="VF Optical Sizing" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/jpamental/pen/dJmOEr/">VF Optical Sizing</a> by Jason Pamental (<a href="https://codepen.io/jpamental">@jpamental</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script><figcaption>Using Optical Sizes for each style</figcaption></figure>             
+              </section>
+		        </article>
+	        </div><!--/.section-content-->
+        </main>
+        <footer id="footer" class="footer clearfix" role="contentinfo">
+	        <div class="section-content">
+	        	<div class="footer-contact h-card">
+
+	        	</div>
+	        </div><!--/.section-content-->
+        </footer>
+
+
+
+
+    <!-- Widowtamer -->
+    <script src="../js/vendor/widowtamer-min.js" defer></script>
+
+    <script src="../js/main.js" defer></script>
+
+    </body>
+</html>

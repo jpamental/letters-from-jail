@@ -1,0 +1,27 @@
+/* Amstelvar Variable Font */
+/*
+  Variations used:
+    wght (38-250)
+    wdth (60-769)
+    OPSZ (12-72)
+    GRAD (88-150)
+*/
+@font-face {
+  font-family: 'Amstelvar VF';
+  src: url('../fonts/AmstelvarAlpha-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Voto Serif Variable Font */
+/*
+  Variations used:
+    wght (28-194)
+    wdth (50-130)
+    OPSZ (12-72)
+*/
+@font-face {
+  font-family: 'Voto Serif GX';
+  src: url('../fonts/VotoSerifGX.ttf') format('truetype');
+  font-display: swap;
+}
+

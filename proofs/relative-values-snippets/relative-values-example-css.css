@@ -1,0 +1,68 @@
+/* Amstelvar Variable Font */
+@font-face {
+  font-family: 'Amstelvar VF';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/AmstelvarAlpha-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --p-font-size: 1;
+  --p-wght: 75;
+}
+
+html {
+  font-size: 100%;
+}
+
+.container {
+  margin: 0 auto 2rem auto;
+  max-width: 35rem;
+}
+
+.container:hover {
+  --p-font-size: 1.5;
+  --p-wght: 120;
+}
+
+p, 
+th, 
+td, 
+ul, 
+li {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+  font-size: calc( var(--p-font-size) * 1em);
+	font-weight: normal;
+  font-variation-settings: 
+    'wght' var(--p-wght), 
+    'wdth' 402, 
+    'opsz' calc( ( var(--p-font-size) * 16 ) ), 
+    'GRAD' 88;
+  font-style: normal;
+  line-height: 1.5;
+	transition: all linear 0.2s; 	
+}
+
+/* Set weight and optical size relative to normal body copy */
+p strong {
+  font-variation-settings: 
+    'wght' calc( ( var(--p-wght) * 1.5 ) ), 
+    'wdth' 402, 
+    'opsz' calc( ( var(--p-font-size) * 16 ) ), 
+    'GRAD' 88;
+}
+
+/* Set font size, weight and optical size relative to normal body copy */
+h1 {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+  /* This calculation is always 'live' so when the value of '--p-font-size' changes on hover, this changes as well and multiplies the new paragraph size by 2 to get a heading twice the size of the body copy */
+  font-size: calc( var(--p-font-size) * 2 * 1em);
+  font-variation-settings: 
+    'wght' calc( ( var(--p-wght) * 1.75 ) ), 
+    'wdth' 402, 
+    'opsz' calc( var(--p-font-size) * 2 ), 
+    'GRAD' 88;
+  font-style: normal;
+  line-height: 1.15;
+	transition: all linear 0.2s; 	
+}
+

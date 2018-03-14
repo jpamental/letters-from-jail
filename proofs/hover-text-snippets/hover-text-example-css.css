@@ -1,0 +1,117 @@
+/* Amstelvar Variable Font */
+@font-face {
+  font-family: 'Amstelvar VF';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/AmstelvarAlpha-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+body, 
+p, 
+th, 
+td, 
+ul, 
+li {
+	font-family: "Amstelvar VF", Georgia, "New Times Roman", serif;
+	font-weight: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.example-hover-grade,
+.example-hover-bolder,
+.example-hover-taller,
+.example-hover-wider,
+.example-hover-shorter {
+  font-style: normal;
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+	transition: all linear 0.2s; 	
+}
+
+.example-hover-grade:hover, 
+.example-hover-grade:focus,
+.example-hover-grade:active {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402, 
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 150;
+}
+
+.example-hover-bolder:hover, 
+.example-hover-bolder:focus,
+.example-hover-bolder:active {
+  font-variation-settings: 
+    'wght' 250, 
+    'wdth' 402, 
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+}
+
+.example-hover-taller:hover, 
+.example-hover-taller:focus,
+.example-hover-taller:active {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 600,
+    'YTAS' 850,
+    'YTDE' 350,
+    'YTUC' 950,
+    'opsz' 16, 
+    'GRAD' 88;
+}
+
+.example-hover-wider:hover, 
+.example-hover-wider:focus,
+.example-hover-wider:active {
+  font-variation-settings: 
+    'wght' 150, 
+    'wdth' 769, 
+    'YTLC' 500,
+    'YTAS' 750,
+    'YTDE' 250,
+    'YTUC' 750,
+    'opsz' 16, 
+    'GRAD' 88;
+}
+
+.example-hover-shorter:hover, 
+.example-hover-shorter:focus,
+.example-hover-shorter:active {
+  font-variation-settings: 
+    'wght' 88, 
+    'wdth' 402,
+    'YTLC' 445,
+    'YTAS' 650,
+    'YTDE' 150,
+    'YTUC' 650,
+    'opsz' 16, 
+    'GRAD' 88;
+}
+

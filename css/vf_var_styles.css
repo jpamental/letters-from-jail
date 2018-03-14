@@ -1,0 +1,251 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #fffffa;
+  color: #504033; }
+
+:root {
+  --bp-small: 24.15;
+  --bp-medium: 43.75;
+  --bp-large: 60.25;
+  --bp-xlarge: 75;
+  --p-line-height-min: 1.25;
+  --p-line-height-max: 1.4;
+  --p-font-size-min: 1.0;
+  --p-font-size-max: 1.25;
+  --p-vf-wdth-min: 225;
+  --p-vf-wdth-max: 402;
+  --p-vf-opsz-min: 16;
+  --p-vf-opsz-max: 20;
+  --h1-line-height-min: 1.15;
+  --h1-line-height-max: 1.25;
+  --h1-font-size-min: 2.0;
+  --h1-font-size-max: 5;
+  --h2-line-height-min: 1.15;
+  --h2-line-height-max: 1.25;
+  --h2-font-size-min: 1.5;
+  --h2-font-size-max: 3.5;
+  --dc-line-height-min: .7;
+  --dc-line-height-max: .95;
+  --dc-font-size-min: 2.7;
+  --dc-font-size-max: 5;
+  --p-vf-wdth-temp: calc(( var(--p-vf-wdth-min) * 1em ) + ( var(--p-vf-wdth-max) - var(--p-vf-wdth-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-large) - var(--bp-small) )));
+  --p-vf-width-calc: 402; }
+
+.calc-value:before {
+  content: calc(( var(--p-vf-wdth-min) * 1em ) + ( var(--p-vf-wdth-max) - var(--p-vf-wdth-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-large) - var(--bp-small) ))); }
+
+/* Undo some of the Layout width bits */
+.section-content {
+  margin: 0 auto;
+  padding: 0 0.5em; }
+
+@media only screen and (min-width: 25em) {
+  .section-content {
+    max-width: 98%; } }
+
+@media only screen and (min-width: 43.75em) {
+  .section-content {
+    max-width: 98%; } }
+
+@media only screen and (min-width: 56.25em) {
+  .section-content {
+    max-width: 98%; } }
+
+@media only screen and (min-width: 71.875em) {
+  .section-content {
+    max-width: 98em; } }
+
+@media only screen and (min-width: 81.25em) {
+  .section-content {
+    max-width: 98em; } }
+
+body,
+p,
+th,
+td,
+ul,
+li {
+  font-family: "Voto Serif GX", "Times New Roman", serif;
+  font-weight: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-variation-settings: "wght" 70, "wdth" 90, "opsz" calc( ( var(--p-font-size-min) * 16 ));
+  font-style: normal; }
+  @media screen and (min-width: 24.15em) {
+    body,
+    p,
+    th,
+    td,
+    ul,
+    li {
+      font-variation-settings: "wght" 70, "wdth" 90, "opsz" calc( ( var(--p-font-size-min) * 18 )); } }
+  @media (min-width: 60.25em) {
+    body,
+    p,
+    th,
+    td,
+    ul,
+    li {
+      font-variation-settings: "wght" 70, "wdth" 100, "opsz" calc( ( var(--p-font-size-max) * 16 )); } }
+
+p {
+  margin: 0 auto .75em auto;
+  max-width: 34rem;
+  /* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
+  -ms-word-break: break-all;
+  word-break: break-all;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+
+/* Variations for font size and line height */
+p {
+  font-size: calc( var(--p-font-size-min) * 1em);
+  line-height: var(--p-line-height-min);
+  transition: all linear 0.2s; }
+  @media screen and (min-width: 24.15em) {
+    p {
+      line-height: calc(( var(--p-line-height-min) * 1em ) + ( var(--p-line-height-max) - var(--p-line-height-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-large) - var(--bp-small) ))); } }
+  @media (min-width: 60.25em) {
+    p {
+      font-size: calc(( var(--p-font-size-min) * 1em ) + ( var(--p-font-size-max) - var(--p-font-size-min) ) * ((100vw - ( var(--bp-large) * 1em )) / ( var(--bp-xlarge) - var(--bp-large) )));
+      line-height: var(--p-line-height-max);
+      max-width: 42rem; } }
+  @media (min-width: 75em) {
+    p {
+      font-size: calc( var(--p-font-size-max) * 1em);
+      max-width: 44rem; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Voto Serif GX", "Times New Roman", serif;
+  font-variation-settings: 'wght' 150,  'wdth' 110,  'opsz' 24;
+  margin-bottom: .25em;
+  transition: all linear 0.2s; }
+
+h1 {
+  font-family: "Voto Serif GX", "Times New Roman", serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-size: calc( var(--h1-font-size-min) * 1em);
+  font-variation-settings: "wght" 180, "wdth" 110, "opsz" calc( ( var(--h1-font-size-min) * 16 ));
+  letter-spacing: -.04em;
+  line-height: var(--h1-line-height-min);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem; }
+  @media screen and (min-width: 24.15em) {
+    h1 {
+      line-height: calc(( var(--h1-line-height-min) * 1em ) + ( var(--h1-line-height-max) - var(--h1-line-height-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+      font-size: calc(( var(--h1-font-size-min) * 1em ) + ( var(--h1-font-size-max) - var(--h1-font-size-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) ))); } }
+  @media screen and (min-width: 43.75em) {
+    h1 {
+      font-variation-settings: "wght" 185, "wdth" 110, "opsz" calc( ( ( var(--h1-font-size-min) + ( ( var(--h1-font-size-max) - var(--h1-font-size-min) ) / 2 ) ) * 16 ));
+      max-width: 44rem; } }
+  @media screen and (min-width: 60.25em) {
+    h1 {
+      max-width: 46rem; } }
+  @media (min-width: 75em) {
+    h1 {
+      font-size: calc( var(--h1-font-size-max) * 1em);
+      font-variation-settings: "wght" 193, "wdth" 110, "opsz" calc( ( var(--h1-font-size-max) * 16 ));
+      line-height: var(--h1-line-height-max);
+      max-width: 50rem; } }
+
+h2 {
+  font-family: "Voto Serif GX", "Times New Roman", serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-size: calc( var(--h2-font-size-min) * 1em);
+  font-variation-settings: 'wght' 150,  'wdth' 100,  'opsz' 24;
+  letter-spacing: -.02em;
+  line-height: var(--h2-line-height-min);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40rem; }
+  @media screen and (min-width: 24.15em) {
+    h2 {
+      line-height: calc(( var(--h2-line-height-min) * 1em ) + ( var(--h2-line-height-max) - var(--h2-line-height-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+      font-size: calc(( var(--h2-font-size-min) * 1em ) + ( var(--h2-font-size-max) - var(--h2-font-size-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) ))); } }
+  @media screen and (min-width: 43.75em) {
+    h2 {
+      font-variation-settings: "wght" 180, "wdth" 100, "opsz" calc( ( ( var(--h2-font-size-min) + ( ( var(--h2-font-size-max) - var(--h2-font-size-min) ) / 2 ) ) * 16 ));
+      max-width: 40rem; } }
+  @media screen and (min-width: 60.25em) {
+    h2 {
+      max-width: 42rem; } }
+  @media (min-width: 75em) {
+    h2 {
+      font-size: calc( var(--h2-font-size-max) * 1em);
+      font-variation-settings: 'wght' 180,  'wdth' 100,  'opsz' 32;
+      line-height: var(--h2-line-height-max);
+      max-width: 44rem; } }
+
+blockquote {
+  font-family: "Voto Serif GX", "Times New Roman", serif;
+  font-variation-settings: 'wght' 180,  'wdth' 100,  'opsz' 80;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75ch;
+  font-size: calc( var(--p-font-size-min) * 1em);
+  line-height: var(--p-line-height-min);
+  transition: all linear 0.2s; }
+  @media screen and (min-width: 24.15em) {
+    blockquote {
+      line-height: calc(( var(--p-line-height-min) * 1em ) + ( var(--p-line-height-max) - var(--p-line-height-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-large) - var(--bp-small) ))); } }
+  @media (min-width: 60.25em) {
+    blockquote {
+      font-size: calc(( var(--p-font-size-min) * 1em ) + ( var(--p-font-size-max) - var(--p-font-size-min) ) * ((100vw - ( var(--bp-large) * 1em )) / ( var(--bp-xlarge) - var(--bp-large) )));
+      line-height: var(--p-line-height-max); } }
+  @media (min-width: 75em) {
+    blockquote {
+      font-size: calc( var(--p-font-size-max) * 1em); } }
+
+/* Figure styles */
+figure {
+  margin-bottom: 2rem; }
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: 100%; }
+
+figcaption {
+  color: #706053;
+  font-size: calc( ( var(--p-font-size-min) * .875 ) * 1em); }
+
+.border img {
+  border: solid 1px #504033; }
+
+.pen-embed {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.row-2col {
+  border-bottom: solid 1px #e1e1e1;
+  max-width: 64rem;
+  margin: 0 auto 2rem auto;
+  padding: 0 0 2rem 0; }
+  @media screen and (min-width: 43.75em) {
+    .row-2col {
+      padding: 2rem 0;
+      border-top: solid 1px #e1e1e1; }
+      h2 + .row-2col {
+        border-top: none; } }
+  .row-2col > * {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    width: 100%; }
+    @media screen and (min-width: 43.75em) {
+      .row-2col > * {
+        margin: 0 2%;
+        width: 45%; } }
+
+.somenewstyle {
+  color: black; }
