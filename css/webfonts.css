@@ -25,3 +25,14 @@
   font-display: swap;
 }
 
+/* FF Meta Variable Demo Font */
+@font-face {
+  font-family: 'FF Meta VF';
+  src: url('../fonts/meta-vf/MetaVariableDemo-Set.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal italic;
+  font-weight: 100 900;
+}
+@supports not (font-variation-settings: normal) {
+  @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i');
+}

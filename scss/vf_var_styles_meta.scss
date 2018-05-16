@@ -6,10 +6,9 @@
   --bp-large: 60.25;
   --bp-xlarge: 75;
 
-  /* initial values  */
-  --text-wght: 90;
-  --text-wdth: 100;
-  --text-opsz: 16;
+  /* initial values ital */
+  --text-wght: 350;
+  --text-ital: 0;
   
   /* Paragraph variables */
   --p-line-height-min: 1.15;
@@ -17,16 +16,15 @@
   --p-font-size-min: 1.0;
   --p-font-size-max: 1.25;
   --p-vf-wght: var(--text-wght);
-  --p-vf-wdth: var(--text-wdth);
 
   /* H1 variables */
   --h1-line-height-min: 1.05;
   --h1-line-height-max: 1.1;
-  --h1-font-size-min: 2;
-  --h1-font-size-max: 4.5;
-  --h1-vf-wght-multiplier-s: 1.5;
-  --h1-vf-wght-multiplier-m: 1.625;
-  --h1-vf-wght-multiplier-l: 1.75;
+  --h1-font-size-min: 3;
+  --h1-font-size-max: 6;
+  --h1-vf-wght-multiplier-s: .33;
+  --h1-vf-wght-multiplier-m: .33;
+  --h1-vf-wght-multiplier-l: .33;
 
   /* H2 variables */
   --h2-line-height-min: 1.15;
@@ -62,12 +60,12 @@
 .italic,
 i,
 em {
-
+  --text-ital: 1;
 }
 
 b,
 strong {
-  --text-wght: 150;
+  --text-wght: 475;
 }
 
 .clear {
@@ -110,16 +108,16 @@ strong,
 button,
 p:first-line,
 p:first-letter {
-	font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
+	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
 	font-weight: normal;
   font-style: normal;
   font-variation-settings: 
-    'wght' var(--text-wght),
-    'wdth' var(--text-wdth),
-    'opsz' var(--text-opsz);
+    'wght' var(--text-wght), 
+    'ital' var(--text-ital);
 }
 
 p {
+  --text-ital: 0;
   margin-left: auto;
   margin-right: auto;
   max-width: 38rem;
@@ -129,19 +127,16 @@ p {
 
 /* Variations and variables */
 p {
-  --text-wdth: calc( var(--p-vf-wdth) * .9 );
   font-size: calc( var(--p-font-size-min) * 1rem );
   line-height: var(--p-line-height-min);
   @media screen and (min-width: 24.15em) {
     line-height: calc(( var(--p-line-height-min) * 1em ) + ( var(--p-line-height-max) - var(--p-line-height-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-large) - var(--bp-small) )));
   }
   @media (min-width: 60.25em) {
-    --text-wdth: calc( var(--p-vf-wdth) * 1 );
     font-size: calc(( var(--p-font-size-min) * 1em ) + ( var(--p-font-size-max) - var(--p-font-size-min) ) * ((100vw - ( var(--bp-large) * 1em )) / ( var(--bp-xlarge) - var(--bp-large) )));
     line-height: var(--p-line-height-max);
   }
   @media (min-width: 75em) {
-    --text-opsz: calc( ( var(--p-font-size-max) * 16 ) );
     font-size: calc( var(--p-font-size-max) * 1em );
     max-width: 42rem;
   }
@@ -150,7 +145,7 @@ p {
 
 /* Generic header styles */
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
+	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: normal;
 	transition: all linear 0.2s; 
 	--text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s) );	
@@ -159,10 +154,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   /* Set --text-wght value multiplier */
 	--text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-s) );	
-  --text-wdth: calc( var(--p-vf-wdth) * .85 );
-  --text-opsz: calc( ( var(--h1-font-size-min) * 16 ) );
+  --text-ital: 0;
 
-	font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
+	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
   font-size: calc( var(--h1-font-size-min) * 1em );
   line-height: var(--h1-line-height-min);
   margin: 1rem auto;
@@ -173,8 +167,6 @@ h1 {
   }
   @media screen and (min-width: 43.75em) {
 	  --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m) );	
-    --text-wdth: calc( var(--p-vf-wdth) * 1.05 );
-    --text-opsz: calc( ( ( var(--h1-font-size-min) + ( ( var(--h1-font-size-max) - var(--h1-font-size-min) ) / 2 ) ) * 16 ) );
     max-width: 60rem;
   }
   @media screen and (min-width: 60.25em) {
@@ -183,7 +175,6 @@ h1 {
     max-width: 70rem;
   }
   @media (min-width: 75em) {
-    --text-opsz: calc( ( var(--h1-font-size-max) * 16 ) );
     font-size: calc( var(--h1-font-size-max) * 1em );
     line-height: var(--h1-line-height-max);
     max-width: 75rem;
@@ -197,9 +188,9 @@ h1 {
 h2 {
   /* Set --text-wght value multiplier */
 	--text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-s) );
-  --text-opsz: calc( ( var(--h2-font-size-min) * 16 ) );
+  --text-ital: 0;
 
-	font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
+	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
   font-size: calc( var(--h2-font-size-min) * 1em );
   line-height: var(--h2-line-height-min);
   margin: 1rem auto .5rem auto;
@@ -210,7 +201,6 @@ h2 {
   }
   @media screen and (min-width: 43.75em) {
   	--text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-m) );	
-    --text-opsz: calc( ( ( var(--h2-font-size-min) + ( ( var(--h2-font-size-max) - var(--h2-font-size-min) ) / 2 ) ) * 16 ) );
 
     max-width: 38.5rem;
   }
@@ -219,7 +209,6 @@ h2 {
   }
   @media (min-width: 75em) {
   	--text-wght: calc( var(--p-vf-wght) * var(--h2-vf-wght-multiplier-l) );	
-    --text-opsz: calc( ( var(--h2-font-size-max) * 16 ) );
 
     font-size: calc( var(--h2-font-size-max) * 1em );
     line-height: var(--h2-line-height-max);
@@ -230,10 +219,10 @@ h2 {
 h3 {
   /* Set --text-wght value multiplier */
 	--text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-s) );
-  --text-opsz: calc( ( var(--h3-font-size-min) * 16 ) );
+	--text-ital: 1;
 
 	color: #444466;
-	font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
+	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
   font-size: calc( var(--h2-font-size-min) * 1em );
   line-height: var(--h2-line-height-min);
   margin: 1rem auto .5rem auto;
@@ -253,7 +242,6 @@ h3 {
   }
   @media (min-width: 75em) {
   	--text-wght: calc( var(--p-vf-wght) * var(--h3-vf-wght-multiplier-l) );	
-    --text-opsz: calc( ( var(--h3-font-size-max) * 16 ) );
 
     font-size: calc( var(--h3-font-size-max) * 1em );
     line-height: var(--h3-line-height-max);
@@ -315,56 +303,49 @@ img {
 
 .article-detail {
   > header {
-    margin-left: -4%;
-    margin-right: -4%;
-    padding-top: 1rem;
+    
     h1 {
-      background-color: #2f2f5e;
-      color: #ffffff;
-      line-height: 3rem;
-      margin: 0;
-      padding: 0 .5rem;
-      @media only screen and (min-width: 24.15em) {
-        line-height: 3rem;
-      }
-      @media only screen and (min-width: 34.15em) {
-        line-height: 5rem;
-      }
-      @media only screen and (min-width: 43.75em) {
-        line-height: 7rem;
-      }
-        }
+      --text-ital: 0;
+      font-size: 15vw;
+      margin-top: 0;
+    }
     h2 {
-      
+      color: #444466;
+      font-size: 4.35vw;
     }
     h3 {
+      --text-ital: 0;
       
-    }
-    .chapter-icon {
-      float: right;
-      height: 5em;
-      margin: -1rem .5rem 0 0;
-      padding: 0;
-      img {
-        max-height: 100%;
-        width: auto;
-      }
-      @media only screen and (min-width: 24.15em) {
-        height: 5rem
-      }
-      @media only screen and (min-width: 34.15em) {
-        height: 7rem
-      }
-      @media only screen and (min-width: 43.75em) {
-        height: 9rem
-      }
-    }
-    @media only screen and (min-width: 24.15em) {
+      color: #000000;
+      font-size: 4vw;
+      text-align: left;
     }
   	@media only screen and (min-width: 43.75em) {
-  	  margin-left: 0;
-  	  margin-right: 0;
+  	  float: left;
+      width: 50%;
+      h1 {
+        font-size: 7.25vw;
+        @supports not (font-variation-settings: normal) {
+          font-size: 6.25vw;
+        }
+
+      }
+      h2 {
+        font-size: 2vw;
+        max-width: none;
+      }
+      h3 {
+        font-size: 2vw;
+      }
   	}
+  }
+  .intro {
+    max-width: none;
+    position: relative;
+    z-index: 45;
+  	@media only screen and (min-width: 43.75em) {
+    	padding-left: 50%;
+    }
   }
 
 }
@@ -402,11 +383,11 @@ img {
 }
 
 /* First-line styles */
-.article-detail.initial > p:first-of-type:first-line {
+.article-detail > p:first-of-type:first-line {
   /* Set --text-x value */
 	--text-wght: calc( var(--p-vf-wght) * 1.25 );	
 
-	font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
+	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
 	@media screen and (min-width: 43.75em) { 
 	  --text-wght: calc( var(--p-vf-wght) * 1.25 );	
 
@@ -420,7 +401,7 @@ img {
 	color: #444466;
 	float: left; 
 	padding-right: 0.05em; 
-	font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
+	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
 	font-size:  calc( var(--dc-font-size-min) * 1em ); 
   line-height: var(--dc-line-height-min);
 	margin-bottom: -.1em; 
@@ -445,7 +426,7 @@ img {
   color: #777;
 	content: "\2766";
 	display: block;
-	font-family: Georgia, "Times New Roman", serif;
+	font-family: Georgia, "New Times Roman", serif;
 	font-size: 5em;
 	font-style: italic;
 	font-weight: 300;
@@ -474,17 +455,19 @@ blockquote {
 	p {
     /* Set --text-x value */
   	--text-wght: calc( var(--p-vf-wght) * .65 );	
+  	--text-ital: 1;
     font-size: 6.5vw;
     margin: 0 0 .25em 0;
     position: relative;
     &:first-letter {
-      
+      --text-ital: 1;
     }
     &:first-line {
       --text-wght: calc( var(--p-vf-wght) * .65 );
     }
 	}
 	cite {
+  	--text-ital: 1;
   	display: block;
     font-size: 3.5vw;
     text-align: right;
@@ -511,7 +494,7 @@ blockquote {
         --text-wght: calc( var(--p-vf-wght) * .8 );
       }
       &:first-letter {
-        
+        --text-ital: 1;
       }
   	}
   	cite {
