@@ -7,7 +7,7 @@
   --bp-xlarge: 75;
 
   /* initial values ital */
-  --text-wght: 350;
+  --text-wght: 300;
   --text-ital: 0;
   
   /* Paragraph variables */
@@ -385,11 +385,11 @@ img {
 /* First-line styles */
 .article-detail > p:first-of-type:first-line {
   /* Set --text-x value */
-	--text-wght: calc( var(--p-vf-wght) * 1.25 );	
+	--text-wght: calc( var(--p-vf-wght) * 1.5 );	
 
 	font-family: "FF Meta VF", "Fira Sans", Helvetica, Arial, sans-serif;
 	@media screen and (min-width: 43.75em) { 
-	  --text-wght: calc( var(--p-vf-wght) * 1.25 );	
+	  --text-wght: calc( var(--p-vf-wght) * 1.75 );	
 
     }
 }
