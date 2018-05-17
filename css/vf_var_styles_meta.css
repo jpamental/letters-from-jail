@@ -106,7 +106,8 @@ p {
   margin-right: auto;
   max-width: 38rem;
   transition: all linear 0.2s;
-  hyphens: auto; }
+  hyphens: auto;
+  hanging-punctuation: first; }
 
 /* Variations and variables */
 p {
