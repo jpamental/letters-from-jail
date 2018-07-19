@@ -33,3 +33,39 @@ window.onresize = function(){
   var style_value = style.getPropertyValue('--p-vf-wdth-temp');
   console.log(style_value);  
 }
+
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
+
+// example use
+var div = document.querySelector('div');
+var divOffset = offset(div);
+console.log(divOffset.left, divOffset.top);
+
+$(function () {
+    var intViewportWidth = window.innerWidth;
+    var $pane = $("#pane");
+    var $animate = $("#animate");
+    $("#scroll_left").click(function (ev) {
+        var new_left;
+        if (ev.target.id === "abs")
+            new_left = 100;
+        else
+            new_left = $pane.scrollLeft() - intViewportWidth;
+        
+        $pane.delay(100).animate({scrollLeft: new_left});
+    });
+    $("#scroll_right").click(function (ev) {
+        var new_left;
+        if (ev.target.id === "abs")
+            new_left = 100;
+        else
+            new_left = $pane.scrollLeft() + intViewportWidth;
+        
+        $pane.delay(100).animate({scrollLeft: new_left});
+    });
+});

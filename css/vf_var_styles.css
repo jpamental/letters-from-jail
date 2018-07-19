@@ -139,8 +139,7 @@ h1 {
   font-family: "Voto Serif GX", Georgia, "Times New Roman", serif;
   font-size: calc( var(--h1-font-size-min) * 1em);
   line-height: var(--h1-line-height-min);
-  margin: 1rem auto;
-  max-width: 50rem; }
+  margin: 1rem auto; }
   @media screen and (min-width: 24.15em) {
     h1 {
       line-height: calc(( var(--h1-line-height-min) * 1em ) + ( var(--h1-line-height-max) - var(--h1-line-height-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
@@ -149,19 +148,16 @@ h1 {
     h1 {
       --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-m));
       --text-wdth: calc( var(--p-vf-wdth) * 1.05);
-      --text-opsz: calc( ( ( var(--h1-font-size-min) + ( ( var(--h1-font-size-max) - var(--h1-font-size-min) ) / 2 ) ) * 16 ));
-      max-width: 60rem; } }
+      --text-opsz: calc( ( ( var(--h1-font-size-min) + ( ( var(--h1-font-size-max) - var(--h1-font-size-min) ) / 2 ) ) * 16 )); } }
   @media screen and (min-width: 60.25em) {
     h1 {
       --text-wght: calc( var(--p-vf-wght) * var(--h1-vf-wght-multiplier-l));
-      line-height: var(--h1-line-height-max);
-      max-width: 70rem; } }
+      line-height: var(--h1-line-height-max); } }
   @media (min-width: 75em) {
     h1 {
       --text-opsz: calc( ( var(--h1-font-size-max) * 16 ));
       font-size: calc( var(--h1-font-size-max) * 1em);
-      line-height: var(--h1-line-height-max);
-      max-width: 75rem; } }
+      line-height: var(--h1-line-height-max); } }
 
 h2 {
   /* Set --text-wght value multiplier */
@@ -242,66 +238,78 @@ img {
 /* Undo some of the Layout width bits */
 .section-content {
   margin: 0 auto;
-  padding: 0 0.5em; }
+  padding: 0;
+  width: 100%; }
 
-@media only screen and (min-width: 24.15em) {
-  .section-content {
-    max-width: 98%; } }
+main {
+  overflow: hidden; }
 
-@media only screen and (min-width: 43.75em) {
-  .section-content {
-    max-width: 98%; } }
+.section-content.main {
+  overflow-x: scroll; }
 
-@media only screen and (min-width: 60.25em) {
-  .section-content {
-    max-width: 98%; } }
-
-@media only screen and (min-width: 75em) {
-  .section-content {
-    max-width: 94%; } }
-
-.article-detail > header {
-  margin-left: -4%;
-  margin-right: -4%;
-  padding-top: 1rem; }
-  .article-detail > header h1 {
-    background-color: #2f2f5e;
-    color: #ffffff;
-    line-height: 3rem;
-    margin: 0;
-    padding: 0 .5rem; }
-    @media only screen and (min-width: 24.15em) {
-      .article-detail > header h1 {
-        line-height: 3rem; } }
-    @media only screen and (min-width: 34.15em) {
-      .article-detail > header h1 {
-        line-height: 5rem; } }
+/* Pagination */
+.article-detail {
+  columns: 100vw auto;
+  height: 90vh;
+  padding-top: 3em; }
+  .article-detail > header {
+    margin: -3em 0 0 0;
+    padding-top: 1rem; }
+    .article-detail > header h1 {
+      background-color: #2f2f5e;
+      color: #ffffff;
+      line-height: 3rem;
+      margin: 0;
+      padding: 0 .5rem; }
+      @media only screen and (min-width: 24.15em) {
+        .article-detail > header h1 {
+          line-height: 3rem; } }
+      @media only screen and (min-width: 34.15em) {
+        .article-detail > header h1 {
+          line-height: 5rem; } }
+      @media only screen and (min-width: 43.75em) {
+        .article-detail > header h1 {
+          line-height: 7rem; } }
+    .article-detail > header .chapter-icon {
+      float: right;
+      height: 5em;
+      margin: -1rem .5rem 0 0;
+      padding: 0; }
+      .article-detail > header .chapter-icon img {
+        max-height: 100%;
+        width: auto; }
+      @media only screen and (min-width: 24.15em) {
+        .article-detail > header .chapter-icon {
+          height: 5rem; } }
+      @media only screen and (min-width: 34.15em) {
+        .article-detail > header .chapter-icon {
+          height: 7rem; } }
+      @media only screen and (min-width: 43.75em) {
+        .article-detail > header .chapter-icon {
+          height: 9rem; } }
     @media only screen and (min-width: 43.75em) {
-      .article-detail > header h1 {
-        line-height: 7rem; } }
-  .article-detail > header .chapter-icon {
-    float: right;
-    height: 5em;
-    margin: -1rem .5rem 0 0;
-    padding: 0; }
-    .article-detail > header .chapter-icon img {
-      max-height: 100%;
-      width: auto; }
-    @media only screen and (min-width: 24.15em) {
-      .article-detail > header .chapter-icon {
-        height: 5rem; } }
-    @media only screen and (min-width: 34.15em) {
-      .article-detail > header .chapter-icon {
-        height: 7rem; } }
-    @media only screen and (min-width: 43.75em) {
-      .article-detail > header .chapter-icon {
-        height: 9rem; } }
-  @media only screen and (min-width: 43.75em) {
-    .article-detail > header {
-      margin-left: 0;
-      margin-right: 0; } }
+      .article-detail > header {
+        margin-left: 0;
+        margin-right: 0; } }
+  .article-detail p {
+    padding-left: 1em;
+    padding-right: 1em; }
+
+/* Footer */
+footer {
+  bottom: 0;
+  left: 0;
+  padding: .5em 1em;
+  position: absolute;
+  width: 100%; }
 
 /* Component styles */
+.footer-contact {
+  font-size: .75em; }
+
+.scroll-buttons {
+  float: right; }
+
 @supports (font-variation-settings: normal) {
   .no-support-message {
     display: none;
