@@ -21,17 +21,39 @@ wt.fix({
 });
 
 window.onload = function(){
-  console.log('test onload');
-  var style = getComputedStyle(document.body);
-  var style_value = style.getPropertyValue('--p-vf-wdth-temp');
-  console.log(style_value);  
+  //console.log('test onload');
+  pageCounter();
 }
 
 window.onresize = function(){
-  console.log("test onresize");
+  //console.log("test onresize");
   var style = getComputedStyle(document.body);
   var style_value = style.getPropertyValue('--p-vf-wdth-temp');
-  console.log(style_value);  
+  //console.log(style_value);  
+  pageCounter();
+}
+
+function pageCounter() {
+  var contentContainerWidth = document.getElementById("content_container").scrollWidth;
+  var windowWidth = window.innerWidth;
+  var pageCount = Math.floor(contentContainerWidth / windowWidth);
+  document.body.style.setProperty('--pageCount', pageCount);
+
+  var currentDiv = document.getElementById("pager_wrapper"); 
+
+  // add the newly created element and its content into the DOM 
+  for (let i = 0; i < pageCount; i++) {
+    // create a new div element 
+    var pageDiv = document.createElement("div"); 
+    // and give it some content 
+    var newContent = document.createTextNode(" "); 
+    // add the text node to the newly created div
+    pageDiv.appendChild(newContent);
+    pageDiv.classList.add('pager-wrapper--page');
+    // set margin-left to keep divs in place
+    //pageDiv.style.marginLeft = 'calc( 101vw * '+ i + ' )';
+    currentDiv.appendChild(pageDiv);
+  }
 }
 
 function offset(el) {
@@ -44,7 +66,7 @@ function offset(el) {
 // example use
 var div = document.querySelector('div');
 var divOffset = offset(div);
-console.log(divOffset.left, divOffset.top);
+//console.log(divOffset.left, divOffset.top);
 
 $(function () {
     var intViewportWidth = window.innerWidth;
